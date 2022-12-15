@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="70188112-c4b8-456c-a67f-34c01858d6e5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     pengembalian.`kd_pengembalian` AS pengembalian_kd_pengembalian,
+     pengembalian.`kd_peminjaman` AS pengembalian_kd_peminjaman,
+     pengembalian.`tgl_kembali` AS pengembalian_tgl_kembali,
+     pengembalian.`telat` AS pengembalian_telat
+FROM
+     `pengembalian` pengembalian]]>
+	</queryString>
+	<field name="pengembalian_kd_pengembalian" class="java.lang.String"/>
+	<field name="pengembalian_kd_peminjaman" class="java.lang.String"/>
+	<field name="pengembalian_tgl_kembali" class="java.sql.Date"/>
+	<field name="pengembalian_telat" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="114" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="96" width="555" height="1" uuid="4026ebd4-ebfc-4feb-8cb5-a07f6a4b8ae1"/>
+			</line>
+			<staticText>
+				<reportElement x="90" y="0" width="465" height="51" uuid="ada2d0ba-b8cc-4b90-b533-d6a8fe90003b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sekertariat Jendral Kementrian Hukum dan Hak Asasi Manusia Republik Indonesia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="51" width="433" height="41" uuid="eb067e0d-6f45-464c-86d8-fd71772b1d81"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Jl. HR. Rasuna Said kav 6-7 Kuningan, Jakarta Selatan, DKI Jakarta, Indonesia-12940 Telp. (021) 5253004]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="107" height="92" uuid="35783ab0-6801-4cca-bf29-9696c3315487"/>
+				<imageExpression><![CDATA["src\\Report\\logokemenhum.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="216" y="0" width="141" height="20" uuid="7ac346e5-e7a1-4073-968a-818577f340f7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Pengembalian]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="28" y="0" width="140" height="20" uuid="fb5ae07b-591f-4d6b-b518-096147c7263e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="0" width="140" height="20" uuid="4fcc03d2-ce7b-4d2b-80ad-af3acd2fe5fb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Kode Pengembalian]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="168" y="0" width="124" height="20" uuid="8f3b55e7-86c6-46ad-bbf3-3d2467c0cc52"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="168" y="0" width="124" height="20" uuid="de5bb76f-ca4f-45d8-9189-2d66808873c7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Kode Peminjaman]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="292" y="0" width="113" height="20" uuid="2d5b5d10-e76d-4405-abe4-1135338daf29"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="292" y="0" width="113" height="20" uuid="0f5cc5a5-cb1a-4789-999c-f758302e06c1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Tanggal Kembali]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="405" y="0" width="100" height="20" uuid="7bf48e47-4ecb-4033-8577-b2c3ca4ca462"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="405" y="0" width="100" height="20" uuid="4e7e9da5-780a-4178-8632-4e795f852b8c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Telat/Hari]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<rectangle>
+				<reportElement x="28" y="0" width="140" height="20" uuid="7f9bd221-9b30-48fb-b410-5a0afea6b134"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="168" y="0" width="124" height="20" uuid="aa352f8c-3853-40ef-b5c3-4b22bc352d32"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="292" y="0" width="113" height="20" uuid="e4e7ee29-42b4-4097-9538-de1daa947836"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="405" y="0" width="100" height="20" uuid="d5038487-f19d-4474-a8f2-99da1b7f6a7f"/>
+			</rectangle>
+			<textField>
+				<reportElement x="28" y="0" width="140" height="20" uuid="5dfd483a-0000-4b64-a5bd-08839df056d5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengembalian_kd_pengembalian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="0" width="124" height="20" uuid="c3e718cd-c69b-4f25-8331-09722f868fab"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengembalian_kd_peminjaman}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="0" width="113" height="20" uuid="89bd1d19-777c-4c02-819b-1d97ab71e419"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengembalian_tgl_kembali}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="0" width="100" height="20" uuid="052ced6a-5932-40ea-a100-d51af9c5cdbe"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengembalian_telat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="173" splitType="Stretch">
+			<staticText>
+				<reportElement x="455" y="37" width="100" height="20" uuid="3239d977-eb20-469b-9e52-114543c3035a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Staff]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="455" y="17" width="100" height="20" uuid="b8b86a7e-3933-4914-bf26-adb3d6ba5e85"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="234" y="1" width="100" height="20" uuid="18efbed6-ac2a-48ad-bb36-90301bd846bc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
