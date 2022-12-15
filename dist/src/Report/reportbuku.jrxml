@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="239211be-6d0b-4610-a0c5-b70b7c47ab39">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     buku.`kd_buku` AS buku_kd_buku,
+     buku.`judul` AS buku_judul,
+     buku.`pengarang` AS buku_pengarang,
+     buku.`penerbit` AS buku_penerbit,
+     buku.`jumlah` AS buku_jumlah,
+     buku.`kd_rak` AS buku_kd_rak
+FROM
+     `buku` buku]]>
+	</queryString>
+	<field name="buku_kd_buku" class="java.lang.String"/>
+	<field name="buku_judul" class="java.lang.String"/>
+	<field name="buku_pengarang" class="java.lang.String"/>
+	<field name="buku_penerbit" class="java.lang.String"/>
+	<field name="buku_jumlah" class="java.lang.String"/>
+	<field name="buku_kd_rak" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="105" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="96" width="555" height="1" uuid="9d31809c-b622-4ee3-8412-eb581e242168"/>
+			</line>
+			<image>
+				<reportElement x="0" y="0" width="107" height="92" uuid="2dc66f17-8794-4bb0-9f29-71b1c6f10876"/>
+				<imageExpression><![CDATA["src\\Report\\logokemenhum.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="107" y="51" width="433" height="41" uuid="3b46aa23-57de-4e53-945e-2c3c1855f3e9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Jl. HR. Rasuna Said kav 6-7 Kuningan, Jakarta Selatan, DKI Jakarta, Indonesia-12940 Telp. (021) 5253004]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="0" width="465" height="51" uuid="ee986e02-958f-4293-9ae3-cacef729d765"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sekertariat Jendral Kementrian Hukum dan Hak Asasi Manusia Republik Indonesia]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="9" width="100" height="20" uuid="af674427-f55d-4ebc-bb70-1031a7088823"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Buku]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="69" height="20" uuid="392b833f-95a1-4fc7-b95e-770e61c83bb7"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="69" height="20" uuid="ffab20fb-be66-48c4-b8a1-5743a4287332"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Kode Buku]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="69" y="0" width="170" height="20" uuid="1766a201-63fd-4bd9-a3df-4c0037b0fdf4"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="69" y="0" width="170" height="20" uuid="66fe3ba8-e8a2-4e6d-87c3-9acdcec2a0ef"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Judul Buku]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="239" y="0" width="114" height="20" uuid="5ece41cc-7a2f-4efd-9640-67027b10283e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="239" y="0" width="114" height="20" uuid="6c03d19c-41f1-4d0b-9861-a69af141bef5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Pengarang]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="353" y="0" width="100" height="20" uuid="f11f97a6-d1aa-43af-8dd4-5625c80506e5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="353" y="0" width="100" height="20" uuid="93eab2fc-b449-4a89-98ba-fb0ae33f040d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Penerbit]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="453" y="0" width="46" height="20" uuid="d2279c52-e36b-40f4-a0de-1c580705ecbc"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="453" y="0" width="46" height="20" uuid="0f965af5-d8fa-4c8a-befe-35875f88eb2b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Jumlah]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="499" y="0" width="56" height="20" uuid="db81e74c-fa22-420a-ae40-4ad1ec1951c6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="499" y="0" width="56" height="20" uuid="540d3e9c-6361-43d8-a90d-bb425ffb3697"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Kode Rak]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="69" height="20" uuid="ca42b274-a6f7-4b48-863b-5c19ee8f0a54"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="69" y="0" width="170" height="20" uuid="cc72ce05-753c-441b-bfb1-0191234761b6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="239" y="0" width="114" height="20" uuid="87ede49b-12a3-4bbc-9ae3-6536c7900c8a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="353" y="0" width="100" height="20" uuid="8a2a190a-aa7f-476a-b150-f68c007ff27f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="453" y="0" width="46" height="20" uuid="a20de15b-30c1-40b4-ade9-db5e7c74149e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="500" y="0" width="55" height="20" uuid="39cf3eaa-1676-4631-9a86-57197b12e487"/>
+			</rectangle>
+			<textField>
+				<reportElement x="249" y="0" width="104" height="20" uuid="186b0ec2-2d27-4d2a-bc8c-4467813d4848"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{buku_pengarang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="0" width="160" height="20" uuid="99d366dc-2d0a-4268-856d-8d7089bbfcd9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{buku_judul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="363" y="0" width="90" height="20" uuid="48a3fb1b-8464-46e0-96c6-db30c9080bd4"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{buku_penerbit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="463" y="0" width="37" height="20" uuid="39eeff2b-046d-4e8c-be64-0318e2fa6f05"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{buku_jumlah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="0" width="45" height="20" uuid="4cfbd484-31ea-42eb-9fa4-0def569a45ad"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{buku_kd_rak}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="0" width="59" height="20" uuid="367f5500-8b69-476f-8cf4-611dcfc61f9c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{buku_kd_buku}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="201" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="453" y="20" width="100" height="20" uuid="e0155ae6-9d0d-4570-b4a2-54fb629188cb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="455" y="40" width="100" height="20" uuid="d68406e5-2080-44d2-8a87-8c920cb50c40"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Staff]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="227" y="181" width="100" height="20" uuid="86a86fd8-7954-487e-81f2-5d4870473d59"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
